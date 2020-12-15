@@ -133,8 +133,113 @@ img.add_border {
           </div>
           
         </header>
-    <div id="tipue_search_content"> <a href='HW1.html'>Next</a> >> HW1<br /><h1>First</h1>
-<br /> <a href='HW1.html'>Next</a> >> HW1</div>
+    <div id="tipue_search_content">從十進制轉換為二進制 << <a href='從十進制轉換為二進制.html'>Previous</a> <a href='P100.html'>Next</a> >> P100<br /><h1>P99</h1>
+<p id="N10690" lang=""><span>如您所見，當子網掩碼中包含255時，它定義了地址的網絡部分。在A類地址中，第一個八位位組定義網絡，最後三個八位位組定義主機。在B類地址中，前兩個八位位組定義網絡，後兩個定義主機。在C類地址中，前三個八位位組定義網絡，最後一個八位位組定義主機。</span></p>
+<div class="imagewrap"><span class="image"><img class="popimg" id="_i_0" onclick="loadImageFromPage(this);" src="https://oli.cmu.edu/repository/webcontent/d826575d0a0001dc3e9f244fa018c560/PCH13/webcontent/PCH13/image2.png"/></span>
+<p id="N10697" lang=""><span><span>子網類表。</span><span>圖片由</span></span><a href="http://www.jasondion.com/" id="_i_1" lang="" target="_blank"><span><span>Jason Dion</span></span></a><span><span>根據CC-BY許可使用</span><span>。</span></span></p>
+</div>
+<p id="N1069F" lang=""><span><span>子網掩碼用於定義我們要引用的特定網絡。</span><span>255.0.0.0的標準A類子網掩碼適用於所有第一個八位位組以1到126之間的數字開頭的網絡。從下面的子網表中調用，我們的網絡為10.0.0.0。</span></span></p>
+<table align="center" cellspacing="0" class="wbtable" lang="">
+<thead>
+<tr>
+<th lang=""><span><span>IP地址（十進制）</span></span></th>
+<th lang=""><span><span>10</span></span></th>
+<th lang=""><span><span>1個</span></span></th>
+<th lang=""><span><span>2</span></span></th>
+<th lang=""><span><span>3</span></span></th>
+</tr>
+<tr>
+<th lang=""><span><span>IP地址（二進制）</span></span></th>
+<th lang=""><span><span>00001010</span></span></th>
+<th lang=""><span><span>00000001</span></span></th>
+<th lang=""><span><span>00000010</span></span></th>
+<th lang=""><span><span>00000011</span></span></th>
+</tr>
+<tr>
+<th lang=""><span><span>子網掩碼（十進制）</span></span></th>
+<th lang=""><span><span>255</span></span></th>
+<th lang=""><span><span>0</span></span></th>
+<th lang=""><span><span>0</span></span></th>
+<th lang=""><span><span>0</span></span></th>
+</tr>
+<tr>
+<th lang=""><span><span>子網掩碼（二進制）</span></span></th>
+<th lang=""><span><span>11111111</span></span></th>
+<th lang=""><span><span>00000000</span></span></th>
+<th lang=""><span><span>00000000</span></span></th>
+<th lang=""><span><span>00000000</span></span></th>
+</tr>
+<tr>
+<th lang=""></th>
+<th lang=""><span><span>網絡位</span></span></th>
+<th lang=""><span><span>主機位</span></span></th>
+<th lang=""><span><span>主機位</span></span></th>
+<th lang=""><span><span>主機位</span></span></th>
+</tr>
+</thead>
+<tbody></tbody>
+</table>
+<p id="N106FE" lang=""><span><span>因此，該地址屬於A類類別。</span><span>在本課程中，我們僅處理“有類”子網掩碼-僅包含255和0的值。在以後的課程中，您可能會看到其他子網掩碼用於進一步拆分網絡。</span></span></p>
+<table align="center" cellspacing="0" class="wbtable" lang="">
+<thead>
+<tr>
+<th lang=""><em class="bold" lang=""><span><span>地址類別</span></span></em></th>
+<th lang=""><em class="bold" lang=""><span><span>第一個八位位組的值</span></span></em></th>
+<th lang=""><em class="bold" lang=""><span><span>分類蒙版（點分十進制）</span></span></em></th>
+<th lang=""><em class="bold" lang=""><span><span>分類蒙版（前綴表示法）</span></span></em></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td lang=""><span><span>A級</span></span></td>
+<td lang=""><span><span>1 – 126</span></span></td>
+<td lang=""><span><span>255.0.0.0</span></span></td>
+<td lang=""><span><span>/ 8</span></span></td>
+</tr>
+<tr class="e">
+<td lang=""><span><span>B級</span></span></td>
+<td lang=""><span><span>128 – 191</span></span></td>
+<td lang=""><span><span>255.255.0.0</span></span></td>
+<td lang=""><span><span>/ 16</span></span></td>
+</tr>
+<tr>
+<td lang=""><span><span>C級</span></span></td>
+<td lang=""><span><span>192 – 223</span></span></td>
+<td lang=""><span><span>255.255.255.0</span></span></td>
+<td lang=""><span><span>/ 24</span></span></td>
+</tr>
+</tbody>
+</table>
+<p id="N10748" lang=""><span><span>如您在地址類別表中看到的，類別A引用的網絡的第一個八位位組的值是1-126，類別B引用的網絡為128-191，類別C的引用為192-223。</span><span>還有一個稱為回送地址的特殊地址，即127.0.0.1。</span><span>保留整個127.xxx範圍以支持此回送地址。</span><span>回送地址是保留的IP，用於引用您當前正在使用的計算機。</span><span>當給出對127.0.0.1的引用時，每台計算機都知道會自己回答。</span><span>這也稱為“本地主機”。</span></span></p>
+<p id="N1074B" lang=""><span><span>要通過Internet路由流量，您需要具有可公共路由的IP地址。</span><span>這些地址由互聯網名稱與數字地址分配機構（ICANN）全局管理。</span><span>如果您希望擁有這些地址之一，則必須購買它們以確保沒有其他人擁有該特定號碼。</span><span>對於大多數用戶而言，這是由Internet服務提供商（ISP）為您完成的，但是如果您需要大量的公共IP地址，則可以從ICANN購買其中的一部分。</span></span></p>
+<p id="N1074E" lang=""><span><span>另一方面，任何人都可以使用私有IP地址，而無需事先協調。</span><span>這是因為專用IP地址不可通過Internet路由，而只能在局域網內使用。</span><span>例如，在您的家裡，您可能有五台計算機連接到交換機，而這些計算機都使用專用IP地址。</span><span>當您發出訪問網絡的請求（例如訪問大學的網站）時，路由器會執行網絡地址轉換（NAT），該轉換可將您的私有IP地址轉換為公共IP地址和端口，從而使代表您提出要求。</span><span>有一個特定範圍的IP地址保留為私有（供您和他人使用）供內部使用。</span></span></p>
+<table align="center" cellspacing="0" class="wbtable" lang="">
+<thead>
+<tr>
+<th lang=""><span><span>地址類別</span></span></th>
+<th lang=""><span><span>專用地址範圍</span></span></th>
+<th lang=""><span><span>默認子網掩碼</span></span></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td lang=""><span><span>A級</span></span></td>
+<td lang=""><span><span>10.0.0.0 – 10.255.255.255</span></span></td>
+<td lang=""><span><span>255.0.0.0</span></span></td>
+</tr>
+<tr class="e">
+<td lang=""><span><span>B級</span></span></td>
+<td lang=""><span><span>172.16.0.0 – 172.31.255.255</span></span></td>
+<td lang=""><span><span>255.255.0.0</span></span></td>
+</tr>
+<tr>
+<td lang=""><span><span>C級</span></span></td>
+<td lang=""><span><span>192.168.0.0 – 192.168.255.255</span></span></td>
+<td lang=""><span><span>255.255.255.0</span></span></td>
+</tr>
+</tbody>
+</table>
+<p id="N10784" lang=""><span><span>對於A類，範圍10.0.0.0到10.255.255.255都是私有地址。</span><span>這提供了1,670萬個地址供使用。</span><span>接下來，我們有B類，其使用範圍為172.16.0.0到172.31.255.255。</span><span>對於C類，範圍是192.168.0.0到192.168.255.255。</span><span>對於C類（最常用的專用IP範圍），子網掩碼為255.255.255.0。</span><span>這意味著，如果您為網絡選擇192.168.1.0，則將有254個可用IP地址。</span><span>您將擁有這麼多可用的IP地址，因為使用子網掩碼選擇了網絡，因此主機部分僅可使用一個八位位組（共有256個選擇，而第一個（.0）用於網絡地址，並且最後一個（.255）是廣播地址）。</span></span></p><br />從十進制轉換為二進制 << <a href='從十進制轉換為二進制.html'>Previous</a> <a href='P100.html'>Next</a> >> P100</div>
         
     <!-- footer -->
       <div class="container">

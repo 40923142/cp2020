@@ -133,8 +133,86 @@ img.add_border {
           </div>
           
         </header>
-    <div id="tipue_search_content"> <a href='HW1.html'>Next</a> >> HW1<br /><h1>First</h1>
-<br /> <a href='HW1.html'>Next</a> >> HW1</div>
+    <div id="tipue_search_content">學習目標 << <a href='學習目標.html'>Previous</a> <a href='P99.html'>Next</a> >> P99<br /><h1>從十進制轉換為二進制</h1>
+<p><span><span>網路主機地址</span></span></p>
+</div>
+</div>
+<div class="section" id="network_and_host_addresses">
+<div class="sectionContain">
+<p id="N106CB" lang=""><span><span>IPv4網絡地址根據子網掩碼進一步分為兩部分：網絡部分和主機部分。</span><span>子網掩碼是用於在子網內路由流量的一系列數字。</span><span>當使用子網掩碼定義網絡部分時，在任何使用二進制“ 11111111”（或十進制255）的地方，該區域均被視為網絡部分的一部分。</span><span>當使用二進制“ 00000000”（十進制為0）時，它表示地址的主機部分。</span><span>主機代表網絡上的單個設備，例如您的計算機或電話。</span></span></p>
+<p id="N106CE" lang=""><span><span>以下兩個表顯示了IP地址的網絡部分和主機部分。</span></span></p>
+<table align="center" cellspacing="0" class="wbtable" lang="">
+<thead>
+<tr>
+<th lang=""><span><span>IP地址（十進制）</span></span></th>
+<th lang=""><span><span>10</span></span></th>
+<th lang=""><span><span>1個</span></span></th>
+<th lang=""><span><span>2</span></span></th>
+<th lang=""><span><span>3</span></span></th>
+</tr>
+<tr>
+<th lang=""><span><span>IP地址（二進制）</span></span></th>
+<th lang=""><span><span>00001010</span></span></th>
+<th lang=""><span><span>00000001</span></span></th>
+<th lang=""><span><span>00000010</span></span></th>
+<th lang=""><span><span>00000011</span></span></th>
+</tr>
+<tr>
+<th lang=""><span><span>子網掩碼（十進制）</span></span></th>
+<th lang=""><span><span>255</span></span></th>
+<th lang=""><span><span>0</span></span></th>
+<th lang=""><span><span>0</span></span></th>
+<th lang=""><span><span>0</span></span></th>
+</tr>
+<tr>
+<th lang=""><span><span>子網掩碼（二進制）</span></span></th>
+<th lang=""><span><span>11111111</span></span></th>
+<th lang=""><span><span>00000000</span></span></th>
+<th lang=""><span><span>00000000</span></span></th>
+<th lang=""><span><span>00000000</span></span></th>
+</tr>
+<tr>
+<th lang=""></th>
+<th lang=""><span><span>網絡位</span></span></th>
+<th lang=""><span><span>主機位</span></span></th>
+<th lang=""><span><span>主機位</span></span></th>
+<th lang=""><span><span>主機位</span></span></th>
+</tr>
+</thead>
+<tbody></tbody>
+</table>
+<p id="N1072D" lang=""><span><span>在上面的示例中，我們看到我們的IP地址為10.1.2.3，它的A類子網掩碼為255.0.0.0。</span><span>（在本模塊的後面，我們將更詳細地討論子網類）。</span><span>如果將此子網掩碼轉換為二進制，我們將看到它寫成八個1，然後是24 0，十進製表示為255.0.0.0。</span><span>因此，無論何時在子網掩碼中看到255，我們都知道看到了定義的網絡部分。</span><span>因此，對於此示例，我們的特定主機為10.1.2.3，我們的網絡地址為10.0.0.0。</span></span></p>
+</div>
+</div>
+<div class="examplewrap">
+<div class="exHead"><span class="scnReader"><span><span>例</span></span></span></div>
+<div class="example clearfix">
+<h5></h5>
+<div>
+<p id="N10734" lang=""><span><span>如果網絡的IP地址為192.168.1.2，並且子網掩碼為255.255.255.0，我們可以識別這兩個地址的網絡和主機部分。</span><span>要確定IP地址的網絡部分，請檢查其八位位組的子網掩碼為255的子網掩碼。在這種情況下，該子網掩碼的第一個，第二個和第三個八位位組為255。</span><span>這意味著IP地址的網絡部分是第一個，第二個和第三個八位位組，如下圖所示。</span><span>剩餘的八位位組（第四個八位位組）是地址的主機部分。</span></span></p>
+<table align="center" cellspacing="0" class="wbtable" lang="">
+<tbody>
+<tr class="e">
+<td lang=""></td>
+<td lang=""><span><span>網絡部分</span></span></td>
+<td lang=""><span><span>主機部分</span></span></td>
+</tr>
+<tr>
+<td lang=""><span><span>IP地址：192.168.1.2</span></span></td>
+<td lang=""><span><span>192.168.1</span></span></td>
+<td lang=""><span><span>2</span></span></td>
+</tr>
+<tr class="e">
+<td lang=""><span><span>子網掩碼：255.255.255.0</span></span></td>
+<td lang=""><span><span>255.255.255</span></span></td>
+<td lang=""><span><span>0</span></span></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div><br />學習目標 << <a href='學習目標.html'>Previous</a> <a href='P99.html'>Next</a> >> P99</div>
         
     <!-- footer -->
       <div class="container">

@@ -133,8 +133,75 @@ img.add_border {
           </div>
           
         </header>
-    <div id="tipue_search_content"> <a href='HW1.html'>Next</a> >> HW1<br /><h1>First</h1>
-<br /> <a href='HW1.html'>Next</a> >> HW1</div>
+    <div id="tipue_search_content">P100 << <a href='P100.html'>Previous</a> <a href='P102.html'>Next</a> >> P102<br /><h1>P101</h1>
+<p id="N10688" lang=""><span>Internet協議版本6的開發是為了提供更多的公共IP地址，因為由於我們生活中網絡設備的激增，IPv4公共地址空間已耗盡。現在，我們的手機，筆記本電腦，平板電腦，恆溫器，冰箱，電視等都已連接到網絡，並且都需要IP地址。由於IPv4使用32位地址，因此我們只能使用42億個IP地址，但是通過將地址空間增加到IPv6中的128位地址，可用的IP地址數量已增加到340個十億位地址。這是地球上每個人（包括孩子）的5 x 10<span> </span></span><sup lang=""><span>28個</span></sup><span>IPv6地址。</span></p>
+<p id="N1068E" lang=""><span><span>IPv5是經過設計的，但最終由於其只是一個64位地址而被跳過，因為有人擔心它不能提供足夠大的可用IP地址池。</span><span>這個實驗性的協議被放棄了，但是它的許多概念以及其他一些協議都被合併到了IPv6協議中。</span></span></p>
+<table align="center" cellspacing="0" class="wbtable" lang="">
+<tbody>
+<tr class="e">
+<td lang=""></td>
+<td align="center" colspan="2" lang=""><span><span>地址數</span></span></td>
+</tr>
+<tr>
+<td lang=""><span><span>IPv4</span></span></td>
+<td lang=""><span><span>2<span> </span></span></span><sup lang=""><span><span>32</span></span></sup></td>
+<td lang=""><span><span>4,294,967,296</span></span></td>
+</tr>
+<tr class="e">
+<td lang=""><span><span>IPv6</span></span></td>
+<td lang=""><span><span>2<span> </span></span></span><sup lang=""><span><span>128</span></span></sup></td>
+<td lang=""><span><span>340,282,366,920,938,000,000,000,000,000,000,000,000,000,000</span></span></td>
+</tr>
+</tbody>
+</table>
+<div class="section"></div>
+<div class="section" id="N106BA">
+<div class="sectionContain">
+<p id="N106C1" lang=""><span><span>ipv6的好處<br/>與IPv4相比，IPv6有很多好處，其中最大的好處就是可用IP地址的數量。</span><span>在IPv6中，沒有提供廣播，這釋放了IP地址，減少了通過網絡發送的流量，並增加了帶寬。</span><span>此外，IPv6不允許在傳輸過程中將數據包分段（分成多個部分）。</span><span>協議通過每次在兩個設備之間創建會話時調整最大傳輸單元大小來解決此問題。</span></span></p>
+<p id="N106C4" lang=""><span><span>IPv6的主要優點在於它允許雙協議棧實現，這意味著IPv4和IPv6可以在設備上同時運行，並可以從任一協議向設備提供服務而不會發生衝突。</span><span>IPv6還可以作為隧道協議在IPv4之上運行，從而也可以在較舊的設備上運行。</span></span></p>
+<p id="N106C7" lang=""><span><span>最後，IPv6中的數據包頭比IPv4中的數據包頭簡單得多。</span><span>在IPv4中，必須完全填寫12個字段（增加了開銷和復雜性），但是在IPv6中，該字段減少到最少五個字段。</span><span>這包括諸如源地址和目標地址以及服務質量優先級之類的字段。</span></span></p>
+<p lang=""><span><span>ipv6地址結構</span></span></p>
+</div>
+</div>
+<div class="section" id="N106CC">
+<div class="sectionContain">
+<p id="N106D3" lang=""><span><span>儘管IPv6相對於IPv4進行了許多改進，但是人們看到的關於IPv6的最值得注意的事情是地址的格式。</span><span>IPv6不是在IPv4中使用像192.168.1.1這樣的地址使用的點分十進製表示法，而是在每個組中使用四個十六進制數字組成的八組。</span><span>然後，每個組用冒號（:)分隔。</span><span>IPv6地址的示例是2002：0000：0000：0000：0000：0000：0000：4815：54ae。</span></span></p>
+<p id="N106D6" lang=""><span><span>十六進制數字允許使用數字0-9從0到15進行計數，然後使用字母A至F。每個十六進制數字都替換了四個二進制數字（或四個1和0），從而使我們可以使用（最多為）32個十六進制數字。</span></span></p>
+<p id="N106D9" lang=""><span><span>幸運的是，IPv6的創建者允許使用簡寫形式。</span><span>首先，只要有前導零，就可以將其丟棄。</span><span>這等效於將數字0010中的前導零刪除為10。這些數字是等效的，只要零在其他數字的前面即可。</span><span>第二種速記技術涉及四個零的幾個分組。</span><span>當存在四個零的多個分組時，可以用雙冒號（：:)表示。</span><span>請注意，每個地址只能使用雙冒號一次，因為知道用雙冒號替換了多少個零集的唯一方法是將速記地址與可用位數進行比較。</span></span></p>
+</div>
+</div>
+<div class="examplewrap">
+<div class="exHead"><span class="scnReader"><span><span>例</span></span></span></div>
+<div class="example clearfix">
+<h5></h5>
+<div>
+<p id="N106E0" lang=""><span><span>2002：0000：0000：0000：0000：0000：0000：0000：4815：54ae可以重寫。</span><span>重寫此地址的一種方法是消除前導零。</span></span></p>
+<div class="image shouldbeleft"><img class="popimg" id="_i_0" onclick="loadImageFromPage(this);" src="https://oli.cmu.edu/repository/webcontent/d826575d0a0001dc3e9f244fa018c560/PCH13/webcontent/PCH13/image8.png"/></div>
+<p id="N106E7" lang=""><span><span>通過消除前導零，2002：0000：0000：0000：0000：0000：0000：4815：54ae變為2002：0：0：0：0：0：0：0：4815：54ae。</span></span></p>
+<p id="N106EA" lang=""><span><span>或者，可以使用雙冒號（：:)代替四個0的多個分組來重寫此地址。</span></span></p>
+<div class="image shouldbeleft"><img class="popimg" id="_i_1" onclick="loadImageFromPage(this);" src="https://oli.cmu.edu/repository/webcontent/d826575d0a0001dc3e9f244fa018c560/PCH13/webcontent/PCH13/image9.png"/></div>
+<p id="N106F1" lang=""><span><span>通過用雙冒號替換四個0的多個分組，2002：0000：0000：0000：0000：0000：0000：0000：4815：54ae變為2002 :: 4815：54ae。</span></span></p>
+</div>
+</div>
+</div>
+<div class="examplewrap">
+<div class="exHead"><span class="scnReader"><span><span>例</span></span></span></div>
+<div class="example clearfix">
+<h5></h5>
+<div>
+<p id="N106F7" lang=""><span><span>可以通過消除前導零和使用雙冒號來編寫2009：0123：4040：0000：0000：0000：000A：100B。</span></span></p>
+<div class="image shouldbeleft"><img class="popimg" id="_i_2" onclick="loadImageFromPage(this);" src="https://oli.cmu.edu/repository/webcontent/d826575d0a0001dc3e9f244fa018c560/PCH13/webcontent/PCH13/image10.png"/></div>
+<p id="N106FE" lang=""><span><span>2009：0123：4040：0000：0000：0000：000A：100B變為2009：123：4040 :: A：100B</span></span></p>
+<p id="N10701" lang=""><span><span>如您所見，IPv6地址比其IPv4地址要復雜得多，但是隨著時間的流逝，您將習慣於看到它們的寫法以及不同符號的含義。</span></span></p>
+<p lang=""><span><span>ipv6數據流</span></span></p>
+</div>
+</div>
+</div>
+<div class="section" id="ipv6_data_flows">
+<div class="sectionContain">
+<p id="N1070D" lang=""><span><span>IPv6中的數據流類似於IPv4中的數據流。</span><span>實際上，單播和多播的工作方式與IPv4相同。</span><span>但是，由於IPv6中沒有廣播，因此已將其替換為“任何廣播”。</span><span>Anycast允許數據從單個源設備傳輸到</span><span>網絡上多個（但特定的）設備中</span></span><em class="italic" lang=""><span><span>最接近</span></span></em><span><span>的一個。</span><span>任意廣播旨在讓一個主機為一組主機啟動路由器表的有效更新。</span><span>IPv6可以確定哪個網關主機最接近，並將數據包發送到該主機，就好像它是單播通信一樣。</span><span>相應地，該主機可以向組中的另一台主機任意廣播，直到更新所有路由表為止。</span></span></p>
+</div>
+</div><br />P100 << <a href='P100.html'>Previous</a> <a href='P102.html'>Next</a> >> P102</div>
         
     <!-- footer -->
       <div class="container">

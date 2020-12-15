@@ -133,8 +133,103 @@ img.add_border {
           </div>
           
         </header>
-    <div id="tipue_search_content"> <a href='HW1.html'>Next</a> >> HW1<br /><h1>First</h1>
-<br /> <a href='HW1.html'>Next</a> >> HW1</div>
+    <div id="tipue_search_content">P101 << <a href='P101.html'>Previous</a> <a href='P103.html'>Next</a> >> P103<br /><h1>P102</h1>
+<p id="N10678" lang=""><span>IP地址始終確定網絡的類別，而不是子網。如果IP地址匹配，則稱網絡正在使用“分類”方案。但是，當公司需要比其使用的地址類別更多的可公共路由的IP地址時，這會浪費許多IP地址。開發無類域間路由（CIDR）是為了使IP尋址方案更高效並延遲IPv4地址的耗盡。本質上，默認子網掩碼中的某些網絡位被借用並用於網絡的主機部分。例如，如果一家企業需要300個公共IP地址，則由於254個設備限制，C類地址將太小，而B類將太大。使用CIDR，可以為企業分配一個IP地址範圍，其子網為255.255.254。0/23。在CIDR表示法中，“ / 23”表示地址的前23位是地址的網絡部分，剩下的最後9位用於主機地址，而不是分類尋址中可用的8位。這意味著現在將有510個IP號碼，而不是254個。</span></p>
+<p lang=""><span>私人vs公用ip位址</span></p>
+<div class="section" id="N1067B">
+<div class="sectionContain">
+<p id="N10682" lang=""><span><span>IPv4耗盡會影響可通過路由器和服務器之類的設備以及用於將家庭連接到Internet的設備在Internet上路由的公用地址。</span><span>無論是電纜調製解調器，DSL還是FIOS，該設備都具有與Internet服務提供商（ISP）通信的公共IP地址。</span><span>這是WAN的示例。</span><span>LAN（局域網）完全由專用IP地址組成。</span></span></p>
+<table class="table labeled" id="N10685_bx">
+<tfoot>
+<tr>
+<td class="captionwrap">
+<p id="N10688" lang=""><span></span><a href="https://en.wikipedia.org/wiki/Private_network" id="_i_0" lang="" target="_blank"><span><span>維基百科的</span></span></a><span><span>CC-BY許可下使用的表格</span><span>。</span></span></p>
+</td>
+</tr>
+</tfoot>
+<tbody>
+<tr>
+<td>
+<table align="center" cellspacing="0" class="wbtable" lang="">
+<thead>
+<tr>
+<th lang=""><em class="bold" lang=""><span><span>RFC1918名稱</span></span></em></th>
+<th lang=""><em class="bold" lang=""><span><span>IP地址範圍</span></span></em></th>
+<th lang=""><em class="bold" lang=""><span><span>地址數</span></span></em></th>
+<th lang=""><em class="bold" lang=""><span><span>最大的CIDR塊（子網掩碼）</span></span></em></th>
+<th lang=""><em class="bold" lang=""><span><span>主機ID大小</span></span></em></th>
+<th lang=""><em class="bold" lang=""><span><span>屏蔽位</span></span></em></th>
+<th lang=""><em class="bold" lang=""><span><span>分類說明</span></span></em></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td lang=""><span><span>24位塊</span></span></td>
+<td lang=""><span><span>10.0.0.0-10.255.255.255</span></span></td>
+<td lang=""><span><span>16,777,216</span></span></td>
+<td lang=""><span><span>10.0.0.0/8（255.0.0.0）</span></span></td>
+<td lang=""><span><span>24位</span></span></td>
+<td lang=""><span><span>8位</span></span></td>
+<td lang=""><span><span>單個A類網絡</span></span></td>
+</tr>
+<tr class="e">
+<td lang=""><span><span>20位塊</span></span></td>
+<td lang=""><span><span>172.16.0.0-172.31.255.255</span></span></td>
+<td lang=""><span><span>1,048,576</span></span></td>
+<td lang=""><span><span>172.16.0.0/12（255.240.0.0）</span></span></td>
+<td lang=""><span><span>20位</span></span></td>
+<td lang=""><span><span>12位</span></span></td>
+<td lang=""><span><span>16個連續的B類網絡</span></span></td>
+</tr>
+<tr>
+<td lang=""><span><span>16位塊</span></span></td>
+<td lang=""><span><span>192.168.0.0-192.168.255.255</span></span></td>
+<td lang=""><span><span>65,536</span></span></td>
+<td lang=""><span><span>192.168.0.0/16（255.255.0.0）</span></span></td>
+<td lang=""><span><span>16位</span></span></td>
+<td lang=""><span><span>16位</span></span></td>
+<td lang=""><span><span>256個連續的C類網絡</span></span></td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+<p id="N106FF" lang=""><span><span>為了使LAN節點能夠訪問Internet，IPv4使用網絡地址轉換（NAT），這是網關/路由器將出站專用IPv4地址替換為ISP分配的可公開路由地址的技術。</span></span></p>
+<p lang=""><span><span>靜態與動態ip尋址</span></span></p>
+</div>
+</div>
+<div class="section" id="N10704">
+<div class="sectionContain">
+<p id="N1070B" lang=""><span><span>從歷史上看，將使用操作系統IPv4配置為客戶端（工作站或打印機）手動分配靜態IP地址。</span><span>請記住，任何網絡中都必須具有唯一的IP地址。</span><span>想像一下，在一家大公司中跟踪所有不同的節點和IP地址有多麼困難。</span><span>動態主機配置協議（DHCP）通過讓一台設備（服務器或路由器）自動分配IP地址來解決此問題。</span><span>在當前的網絡結構中，您仍將靜態IP地址分配給必須保證連接性的設備：服務器，路由器，管理型交換機等。但是，DHCP可以通過大量的無線設備（例如手機，平板電腦和筆記本電腦每天進出網絡。</span><span>公司已製定政策，要求員工使用自己的設備來工作，從而訪問公司網絡。</span><span>DHCP將提供客戶端設置參數（網關，域和名稱服務器），保留特定的IP地址池，並為設備的IP分配提供定時租約。</span></span></p>
+<p lang=""><span><span>apipa/本地鏈接</span></span></p>
+<p lang=""><span>當沒有靜態分配的IP地址，或者DHCP沒有為網絡接口分配一個IP地址時，本地鏈接地址是操作系統分配的特殊地址。</span><span>本地鏈接地址不可路由，只能在LAN網段中使用。</span><span>在IPv4中，地址範圍為169.254.0.0/16，格式為169.254.xx。在IPv6中，格式為FE80 :: / 64。</span><span>在Microsoft操作系統中，本地鏈接地址稱為自動專用IP尋址（APIPA）。</span></p>
+</div>
+</div>
+<div class="section" id="N10710">
+<div class="sectionContain">
+<p id="N1071A" lang=""><span><span>如果要對應該連接的NIC（網絡接口卡）進行故障排除，並且看到本地鏈接地址，則表明配置有問題，因為操作系統已分配了該地址。</span></span></p>
+<p lang=""><span><span>客戶端DHCP</span></span></p>
+</div>
+</div>
+<div class="section" id="N1071F">
+<div class="sectionContain">
+<p id="N10726" lang=""><span><span>DHCP通過使用授權設備（服務器或路由器）來分配IP地址而起作用。</span><span>為了使它起作用，必須將客戶端配置為尋找DHCP授權，並確認它將接受IP分配。</span><span>這些設置通過網絡和共享中心位於“網絡連接”中，也可以直接通過控制面板位於“網絡連接”中。</span><span>配置設置位於IPv4或IPv6下的連接屬性中。</span></span></p>
+<p lang=""><span><span>客戶端dns設置</span></span></p>
+</div>
+</div>
+<div class="section" id="N1072B">
+<div class="sectionContain">
+<p id="N10732" lang=""><span><span>域名系統（DNS）是Internet協議的一部分，該協議將IP地址轉換為名稱地址。</span><span>IPv4或IPv6屬性窗口的網絡屬性部分中有一個設置，允許手動設置域名系統（DNS）服務器地址。</span><span>本地DNS緩存將保留IP地址到LAN設備和Internet地址的名稱轉換的本地記錄。</span><span>可以將備用DNS服務器地址添加到客戶端以幫助名稱解析，從而改善數據流。</span></span></p>
+<p lang=""><span><span>網路</span></span></p>
+</div>
+</div>
+<div class="section" id="N10737">
+<div class="sectionContain">
+<p id="N1073E" lang=""><span><span>網關是將不同網絡類型連接在一起的設備。</span><span>在當今的大多數SOHO（小型辦公室，家庭辦公室）環境中，這是通過WAN端口（電纜，DSL或FIOS）將LAN連接到ISP調製解調器的路由器，可以提供Internet訪問。</span><span>在較大的公司環境中，它是LAN中的最後一個路由器，該路由器連接到WAN鏈接，然後將IP數據包傳遞到其目的地。</span><span>區別在於，在較大的公司環境中，客戶端工作站和網關之間可以有多個LAN網段和路由器。</span></span></p>
+</div>
+</div><br />P101 << <a href='P101.html'>Previous</a> <a href='P103.html'>Next</a> >> P103</div>
         
     <!-- footer -->
       <div class="container">
