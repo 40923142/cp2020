@@ -133,9 +133,91 @@ img.add_border {
           </div>
           
         </header>
-    <div id="tipue_search_content">P104 << <a href='P104.html'>Previous</a> <a href='P106.html'>Next</a> >> P106<br /><h1>P105</h1>
-<p><span>在本課程中，我們將討論傳輸控制協議（TCP）和用戶數據報協議（UDP）以及它們相關的端口和協議。</span><span>我們將專門解決當今使用的各種電子郵件端口和協議，並在Web安全的背景下討論安全套接字層/傳輸層安全性（SSL / TLS）。</span><span>然後，我們將討論文件傳輸協議（FTP）和超文本傳輸協議（HTTP）及其在當今Internet上的使用，以及一些較老的技術，例如Telnet及其更安全的替代方法，安全外殼（SSH）。</span></p>
-<br />P104 << <a href='P104.html'>Previous</a> <a href='P106.html'>Next</a> >> P106</div>
+    <div id="tipue_search_content">P108 << <a href='P108.html'>Previous</a> <a href='處理字符串（幾種方法）.html'>Next</a> >> 處理字符串（幾種方法）<br /><h1>HW3</h1>
+<p>charcter Input</p>
+<div><i>input strings types int</i></div>
+<p>Calibrating the exercises to the audience is going to be a challenging task, so I ask you to bear with me if the exercises are too easy or too hard. Every week there will be a poll you can click on to discuss whether the exercise is too easy or too hard and hopefully in a few weeks, I’ll get the level right. Let’s get to it! I will start with the exercise and include a discussion later, in case you want the extra challenge.</p>
+<p>exercise1(and solution)</p>
+<p>Create a program that asks the user to enter their name and their age. Print out a message addressed to them that tells them the year that they will turn 100 years old.</p>
+<p>Extras:</p>
+<ol>
+<li>Add on to the previous program by asking the user for another number and printing out that many copies of the previous message. (<em>Hint:<span> order of operations</span><span> </span>exists in Python</em>)</li>
+<li>Print out that many copies of the previous message on separate lines. (<em>Hint: the string<span> </span><code class="highlighter-rouge">"\n</code><span> </span>is the same as pressing the ENTER button</em>)</li>
+</ol>
+<p>discussion</p>
+<p>Concepts for this week:</p>
+<ul>
+<li>Getting user input</li>
+<li>Manipulating strings (a few ways)</li>
+</ul>
+<p>user input in python</p>
+<p>To get user input in Python (3), the command you use is<span> </span><a href="http://docs.python.org/3.3/library/functions.html?highlight=input#input"><code class="highlighter-rouge">input()</code></a>. Store the result in a variable, and use it to your heart’s content. Remember that the result you get from the user will be a string, even if they enter a number.</p>
+<p>For example,</p>
+<figure class="highlight">
+<pre><code class="language-python" data-lang="python"><span class="n">name</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s">"Give me your name: "</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="s">"Your name is "</span> <span class="o">+</span> <span class="n">name</span><span class="p">)</span></code></pre>
+</figure>
+<p>What this will print in the terminal (or the shell, whatever you are running Python in) will be:</p>
+<figure class="highlight">
+<pre><code class="language-python" data-lang="python"><span class="o">&gt;&gt;&gt;</span> <span class="n">Give</span> <span class="n">me</span> <span class="n">your</span> <span class="n">name</span><span class="p">:</span> <span class="n">Michele</span>
+<span class="n">Your</span> <span class="n">name</span> <span class="ow">is</span> <span class="n">Michele</span></code></pre>
+</figure>
+<p>What happens at the end of<span> </span><code class="highlighter-rouge">input()</code><span> </span>is that it waits for the user to type something and press ENTER. Only after the user presses ENTER does the program continue.</p>
+<p>Manipulating strings (a few ways)</p>
+<p>What you get from the<span> </span><code class="highlighter-rouge">input()</code><span> </span>function is a string. What can you do with it?</p>
+<p>First: Make the string into a number. Let’s say you are 100% positive that the user entered a number. You can turn the string into an integer with the function<span> </span><a href="http://docs.python.org/3.3/library/functions.html#int"><code class="highlighter-rouge">int()</code></a>. (In a later exercise or two or three there will be questions about what to do when the user does NOT enter a number and you try to do this; for now don’t worry about that problem). Here is what this looks like:</p>
+<figure class="highlight">
+<pre><code class="language-python" data-lang="python"><span class="n">age</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s">"Enter your age: "</span><span class="p">)</span>
+<span class="n">age</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">age</span><span class="p">)</span></code></pre>
+</figure>
+<p>(or, if you want to be more compact with your code)</p>
+<figure class="highlight">
+<pre><code class="language-python" data-lang="python"><span class="n">age</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s">"Enter your age: "</span><span class="p">))</span>
+	</code></pre>
+</figure>
+<p>In both cases,<span> </span><code class="highlighter-rouge">age</code><span> </span>will hold a variable that is an integer, and now you can do math with it.</p>
+<p>(Note, you can also turn integers into strings exactly in the opposite way, using the<span> </span><a href="http://docs.python.org/3.3/library/functions.html#str"><code class="highlighter-rouge">str()</code></a><span> </span>function)</p>
+<p>Second: Do math with strings. What do I mean by that? I mean, if I want to combine</p>
+<p><span>(concatenate </span>is the computer science word for this) strings, all I need to do is add them:</p>
+<figure class="highlight">
+<pre><code class="language-python" data-lang="python">	
+<span class="k">print</span><span class="p">(</span><span class="s">"Were"</span> <span class="o">+</span> <span class="s">"wolf"</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="s">"Door"</span> <span class="o">+</span> <span class="s">"man"</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="s">"4"</span> <span class="o">+</span> <span class="s">"chan"</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span> <span class="o">+</span> <span class="s">"chan"</span><span class="p">)</span></code></pre>
+</figure>
+<p>The same works for multiplication:<span class="k">print</span><span class="p">(</span><span class="mi">4</span> <span class="o">*</span> <span class="s">"test"</span><span class="p">)</span></p>
+<p><span class="p"></span></p>
+<p><span class="p">字型輸入</span></p>
+<div><i><span><span>輸入字符串類型int</span></span></i></div>
+<p><span><span>向觀眾校準練習將是一項艱鉅的任務，因此，我請您忍受練習是否太容易或太難。</span><span>每週都會有一個民意測驗，您可以單擊以討論該練習是太容易還是太難了，希望在幾週後，我會把水平調到正確的水平。</span><span>讓我們開始吧！</span><span>如果您需要額外的挑戰，我將從練習開始，並在以後進行討論。</span></span></p>
+<p><span><span>練習1和解決辦法</span></span></p>
+<p><span><span>創建一個程序，要求用戶輸入他們的姓名和年齡。</span><span>打印給他們的消息，告訴他們他們將滿100歲的年份。</span></span></p>
+<p><span><span>附加功能：</span></span></p>
+<ol>
+<li><span><span>通過詢問用戶另一個號碼並打印出先前消息的許多副本來添加到先前的程序中。</span><span>（</span></span><em><span><span>提示：操作順序</span></span><span><span>在Python中存在</span></span></em><span><span>）</span></span></li>
+<li><span><span>在單獨的行上打印出先前消息的許多副本。</span><span>（</span></span><em><span><span>提示：字符串</span></span><code class="highlighter-rouge">"\n</code><span><span>與按ENTER按鈕相同</span></span></em><span><span>）</span></span></li>
+</ol>
+<p><span><span>討論區</span></span></p>
+<p><span><span>本週的概念：</span></span></p>
+<ul>
+<li><span><span>獲取用戶輸入</span></span></li>
+<li><span><span>處理字符串（幾種方法）</span></span></li>
+</ul>
+<p><span><span>使用python的用戶輸入</span></span></p>
+<p><span><span>要在Python（3）中獲得用戶輸入，您使用的命令是</span></span><a href="http://docs.python.org/3.3/library/functions.html?highlight=input#input"><code class="highlighter-rouge">input()</code></a><span><span>。</span><span>將結果存儲在變量中，並將其用於您的內心。</span><span>請記住，即使用戶輸入數字，您從用戶那裡得到的結果也將是字符串。</span></span></p>
+<p><span><span>例如，</span></span></p>
+<figure class="highlight">
+<pre><code class="language-python" data-lang="python"><span class="n">name</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s">"Give me your name: "</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="s">"Your name is "</span> <span class="o">+</span> <span class="n">name</span><span class="p">)</span></code></pre>
+</figure>
+<p><span><span>這將在終端（或外殼，無論您在其中運行Python的什麼）中顯示的內容是：</span></span></p>
+<figure class="highlight">
+<pre><code class="language-python" data-lang="python"><span class="o">&gt;&gt;&gt;</span> <span class="n">Give</span> <span class="n">me</span> <span class="n">your</span> <span class="n">name</span><span class="p">:</span> <span class="n">Michele</span>
+<span class="n">Your</span> <span class="n">name</span> <span class="ow">is</span> <span class="n">Michele</span></code></pre>
+</figure>
+<p><span><span>最後發生的</span></span><code class="highlighter-rouge">input()</code><span><span>是，它等待用戶鍵入內容並按Enter。</span><span>僅在用戶按下ENTER之後，程序才會繼續。</span></span></p>
+<br />P108 << <a href='P108.html'>Previous</a> <a href='處理字符串（幾種方法）.html'>Next</a> >> 處理字符串（幾種方法）</div>
         
     <!-- footer -->
       <div class="container">

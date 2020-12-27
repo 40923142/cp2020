@@ -122,7 +122,7 @@ img.add_border {
                             <li><a href="./../blog/index.html">blog</a></li>
                         </ul>
                       </li>
-                     <li><a href='紀錄自己的網站.html'>紀錄自己的網站</a><li class='has-children'><a href='HW1.html'>HW1</a><ul class='dropdown'><li><a href='P97.html'>P97</a><li class='has-children'><a href='P98.html'>P98</a><ul class='dropdown'><li><a href='學習目標.html'>學習目標</a><li><a href='從十進制轉換為二進制.html'>從十進制轉換為二進制</a></li></ul><li><a href='P99.html'>P99</a><li><a href='P100.html'>P100</a><li><a href='P101.html'>P101</a><li><a href='P102.html'>P102</a><li><a href='P103.html'>P103</a><li><a href='P104.html'>P104</a><li><a href='P105.html'>P105</a><li><a href='P106.html'>P106</a><li><a href='P107.html'>P107</a><li><a href='P108.html'>P108</a></li></ul><li><a href='HW2.html'>HW2</a></li>
+                     <li><a href='紀錄自己的網站.html'>紀錄自己的網站</a><li class='has-children'><a href='HW1.html'>HW1</a><ul class='dropdown'><li><a href='P97.html'>P97</a><li class='has-children'><a href='P98.html'>P98</a><ul class='dropdown'><li><a href='學習目標.html'>學習目標</a><li><a href='從十進制轉換為二進制.html'>從十進制轉換為二進制</a></li></ul><li><a href='P99.html'>P99</a><li><a href='P100.html'>P100</a><li><a href='P101.html'>P101</a><li><a href='P102.html'>P102</a><li><a href='P103.html'>P103</a><li><a href='P104.html'>P104</a><li><a href='P105.html'>P105</a><li><a href='P106.html'>P106</a><li><a href='P107.html'>P107</a><li><a href='P108.html'>P108</a></li></ul><li class='has-children'><a href='HW3.html'>HW3</a><ul class='dropdown'><li><a href='處理字符串（幾種方法）.html'>處理字符串（幾種方法）</a></li>
                       </ul>
                 </nav>
               </div>
@@ -133,9 +133,36 @@ img.add_border {
           </div>
           
         </header>
-    <div id="tipue_search_content">P108 << <a href='P108.html'>Previous</a> <br /><h1>HW2</h1>
-</div>
-</div><br />P108 << <a href='P108.html'>Previous</a> </div>
+    <div id="tipue_search_content">HW3 << <a href='HW3.html'>Previous</a> <br /><h1>處理字符串（幾種方法）</h1>
+<p><span><span>您從</span></span><code class="highlighter-rouge">input()</code><span><span>函數中</span><span>得到的</span><span>是一個字符串。</span><span>你能做什麼呢？</span></span></p>
+<p><span><span>第一：將字符串變成數字。</span><span>假設您100％肯定用戶輸入了數字。</span><span>您可以使用函數將字符串轉換為整數</span></span><a href="http://docs.python.org/3.3/library/functions.html#int"><code class="highlighter-rouge">int()</code></a><span><span>。</span><span>（在以後的一兩三個練習中，當用戶不輸入數字而您嘗試這樣做時，將會出現有關如何處理的問題；現在不必擔心該問題）。</span><span>看起來像這樣：</span></span></p>
+<figure class="highlight">
+<pre><code class="language-python" data-lang="python"><span class="n">age</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s">"Enter your age: "</span><span class="p">)</span>
+<span class="n">age</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">age</span><span class="p">)</span></code></pre>
+</figure>
+<p><span><span>（或者，如果您想使代碼更緊湊）</span></span></p>
+<figure class="highlight">
+<pre><code class="language-python" data-lang="python"><span class="n">age</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s">"Enter your age: "</span><span class="p">))</span>
+	</code></pre>
+</figure>
+<p><span><span>在這兩種情況下，</span></span><code class="highlighter-rouge">age</code><span><span>都將包含一個整數變量，現在您可以使用它進行數學運算。</span></span></p>
+<p><span><span>（請注意，您還可以使用</span></span><a href="http://docs.python.org/3.3/library/functions.html#str"><code class="highlighter-rouge">str()</code></a><span><span>函數</span><span>以相反的方式將整數轉換為字符串</span><span>）</span></span></p>
+<p><span>第二：對字符串進行數學運算。那是什麼意思<span> </span>我的意思是，如果我想組合</span></p>
+<p><span><span>(連接起來</span><span>就是計算機科學這個詞）字符串，我要做的就是添加它們：</span></span></p>
+<figure class="highlight">
+<pre><code class="language-python" data-lang="python">	
+<span class="k">print</span><span class="p">(</span><span class="s">"Were"</span> <span class="o">+</span> <span class="s">"wolf"</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="s">"Door"</span> <span class="o">+</span> <span class="s">"man"</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="s">"4"</span> <span class="o">+</span> <span class="s">"chan"</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span> <span class="o">+</span> <span class="s">"chan"</span><span class="p">)</span></code></pre>
+</figure>
+<p><span><span>乘法的工作原理相同：</span></span></p>
+<figure class="highlight">
+<pre><code class="language-python" data-lang="python"><span class="k">print</span><span class="p">(</span><span class="mi">4</span> <span class="o">*</span> <span class="s">"test"</span><span class="p">)</span></code></pre>
+</figure>
+<figure class="highlight">
+<pre><code class="language-python" data-lang="python"><span class="p"> </span></code></pre>
+</figure></div></div><br />HW3 << <a href='HW3.html'>Previous</a> </div>
         
     <!-- footer -->
       <div class="container">
