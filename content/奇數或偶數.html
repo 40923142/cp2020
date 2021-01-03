@@ -1,0 +1,318 @@
+<!DOCTYPE html><html>
+        <head>
+        <title>CMSiMDE</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link href="https://fonts.googleapis.com/css?family=Quicksand:300,400,500,700,900" rel="stylesheet">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/fonts/icomoon/style.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/bootstrap.min.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/magnific-popup.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/jquery-ui.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/owl.carousel.min.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/owl.theme.default.min.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/bootstrap-datepicker.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/fonts/flaticon/font/flaticon.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/aos.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/style.css">
+        <link rel="shortcut icon" href="./../cmsimde/static/favicons.png">
+        
+        <style type='text/css'>
+            .site-section {
+            background-color: #FFFF;
+            padding: 40px 40px;
+            }
+            body > div > div.dropdown.open {
+                display: block;
+            }
+        </style>
+    
+        <!-- <script src="./../cmsimde/static/jquery.js"></script> -->
+        <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> -->
+        <script src="../cmsimde/static/chimper/js/jquery-3.3.1.min.js"></script>
+        <link rel="stylesheet" href="./../cmsimde/static/tipuesearch/css/normalize.min.css">
+        <script src="./../cmsimde/static/tipuesearch/tipuesearch_set.js"></script>
+        <script src="tipuesearch_content.js"></script>
+        <link rel="stylesheet" href="./../cmsimde/static/tipuesearch/css/tipuesearch.css">
+        <script src="./../cmsimde/static/tipuesearch/tipuesearch.js"></script>
+        <script>
+            /* original tipuesearch
+            $(document).ready(function() {
+                 $('#tipue_search_input').tipuesearch();
+            });
+            */
+            // customed doSearch
+            function doSearch() {
+                $('#tipue_search_input').tipuesearch({
+                    newWindow: true, 
+                    minimumLength: 2,
+                    wholeWords: false, // for search 中文
+                });
+            }
+            $(document).ready(doSearch);
+        </script>
+        
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shCore.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushBash.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushDiff.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushJScript.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushJava.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushPython.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushSql.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushHaxe.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushXml.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushPhp.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushLua.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushCpp.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushCss.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushCSharp.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushDart.js"></script>
+<link type="text/css" rel="stylesheet" href="./../cmsimde/static/syntaxhighlighter/css/shCoreDefault.css"/>
+<script type="text/javascript">SyntaxHighlighter.all();</script>
+<!-- 暫時不用
+<script src="./../cmsimde/static/fengari-web.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/Cango-13v08-min.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/CangoAxes-4v01-min.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/gearUtils-05.js"></script>
+-->
+<!-- for Brython 暫時不用
+<script src="https://scrum-3.github.io/web/brython/brython.js"></script>
+<script src="https://scrum-3.github.io/web/brython/brython_stdlib.js"></script>
+-->
+<style>
+img.add_border {
+    border: 3px solid blue;
+}
+</style>
+
+</head>
+<body>
+<div class='container'><nav>
+        
+    <div class="site-wrap">
+
+    <div class="site-mobile-menu">
+      <div class="site-mobile-menu-header">
+        <div class="site-mobile-menu-close mt-3">
+          <span class="icon-close2 js-menu-toggle"></span>
+        </div>
+      </div>
+      <div class="site-mobile-menu-body"></div>
+    </div>
+    
+            <header class="site-navbar py-4 bg-white" role="banner">
+              <div class="container-fluid">
+                <div class="row align-items-center">
+                <h1>40923142</h1>
+                <div class="pl-4">
+                    <form>
+                    <input type="text" placeholder="Search" name="q" id="tipue_search_input" pattern=".{2,}" title="At least 2 characters" required>
+                    </form>
+                </div>
+                  <!-- <div class="col-11 col-xl-2">
+                    <h1 class="mb-0 site-logo"><a href="index.html" class="text-black h2 mb-0">40923142</a></h1> 
+                  </div>
+                  -->
+                  <div class="col-12 col-md-10 d-none d-xl-block">
+                    <nav class="site-navigation position-relative text-right" role="navigation">
+    <ul class='site-menu js-clone-nav mr-auto d-none d-lg-block'>
+                        <li class="active has-children"><a href="index.html">Home</a>
+                        <ul class="dropdown">
+                            <li><a href="sitemap.html">Site Map</a></li>
+                            <li><a href="./../reveal/index.html">reveal</a></li>
+                            <li><a href="./../blog/index.html">blog</a></li>
+                        </ul>
+                      </li>
+                     <li><a href='紀錄自己的網站.html'>紀錄自己的網站</a><li class='has-children'><a href='HW1.html'>HW1</a><ul class='dropdown'><li><a href='P97.html'>P97</a><li class='has-children'><a href='P98.html'>P98</a><ul class='dropdown'><li><a href='學習目標.html'>學習目標</a><li><a href='從十進制轉換為二進制.html'>從十進制轉換為二進制</a></li></ul><li><a href='P99.html'>P99</a><li><a href='P100.html'>P100</a><li><a href='P101.html'>P101</a><li><a href='P102.html'>P102</a><li><a href='P103.html'>P103</a><li><a href='P104.html'>P104</a><li><a href='P105.html'>P105</a><li><a href='P106.html'>P106</a><li><a href='P107.html'>P107</a><li><a href='P108.html'>P108</a></li></ul><li class='has-children'><a href='HW3.html'>HW3</a><ul class='dropdown'><li><a href='奇數或偶數.html'>奇數或偶數</a><li><a href='處理字符串（幾種方法）.html'>處理字符串（幾種方法）</a></li>
+                      </ul>
+                </nav>
+              </div>
+              <div class="d-inline-block d-xl-none ml-md-0 mr-auto py-3" style="position: relative; top: 3px;"><a href="#" class="site-menu-toggle js-menu-toggle text-black"><span class="icon-menu h3"></span></a></div>
+              </div>
+
+            </div>
+          </div>
+          
+        </header>
+    <div id="tipue_search_content">HW3 << <a href='HW3.html'>Previous</a> <a href='處理字符串（幾種方法）.html'>Next</a> >> 處理字符串（幾種方法）<br /><h1>奇數或偶數</h1>
+<p>odd or even</p>
+<div><i>input if types int equality comparison numbers mod</i></div>
+<p>Again, the exercise comes first (with a few extras if you want the extra challenge or want to spend more time), followed by a discussion. Enjoy!</p>
+<p>exercise 2 (and solution)</p>
+<p>Ask the user for a number. Depending on whether the number is even or odd, print out an appropriate message to the user.<span> </span><em>Hint: how does an even / odd number react differently when divided by 2?</em></p>
+<p>Extras:</p>
+<ol>
+<li>If the number is a multiple of 4, print out a different message.</li>
+<li>Ask the user for two numbers: one number to check (call it<span> </span><code class="highlighter-rouge">num</code>) and one number to divide by (<code class="highlighter-rouge">check</code>). If<span> </span><code class="highlighter-rouge">check</code><span> </span>divides evenly into<span> </span><code class="highlighter-rouge">num</code>, tell that to the user. If not, print a different appropriate message.</li>
+</ol>
+<p>discussion</p>
+<p>Concepts for this week:</p>
+<ul>
+<li>Modular arithmetic (the modulus operator)</li>
+<li>Conditionals (if statements)</li>
+<li>Checking equality</li>
+</ul>
+<p>modular arithmetic (the modulus operator)</p>
+<p>We have been doing arithmetic (addition, subtraction, multiplication, division) since elementary school, and often it is useful for us to find not the answer to a division problem but the remainder when we do a division operation. This operation is called the “modulus operation.” For example, when I divide 5 by 3, the remainder is 2, and the sentence reads like this: “5 modulo 3 is 2.”</p>
+<p>In the Python shell:</p>
+<figure class="highlight">
+<pre><code class="language-python" data-lang="python">  
+<span class="o">&gt;&gt;&gt;</span> <span class="mi">5</span> <span class="o">%</span> <span class="mi">3</span>
+<span class="mi">2</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="mi">6</span> <span class="o">%</span> <span class="mi">3</span>
+<span class="mi">0</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="mi">7</span> <span class="o">%</span> <span class="mi">3</span>
+<span class="mi">1</span></code></pre>
+</figure>
+<p>The<span> </span><code class="highlighter-rouge">%</code><span> </span>sign is exactly the modulus operator.</p>
+<p>conditionals</p>
+<p>When a computer (or a program) needs to decide something, it checks whether some condition is satisfied, which is where the term<span> </span><strong>conditional</strong><span> </span>comes from. Conditionals are a fancy way of saying “if statements”. If Michele was born in New York, she has an American passport. That statement is a conditional (if statement) that in this case is true. In Python this works the same way:</p>
+<figure class="highlight">
+<pre><code class="language-python" data-lang="python">  
+<span class="k">if</span> <span class="n">age</span> <span class="o">&gt;</span> <span class="mi">17</span><span class="p">:</span> 
+  <span class="k">print</span><span class="p">(</span><span class="s">"can see a rated R movie"</span><span class="p">)</span>
+<span class="k">elif</span> <span class="n">age</span> <span class="o">&lt;</span> <span class="mi">17</span> <span class="ow">and</span> <span class="n">age</span> <span class="o">&gt;</span> <span class="mi">12</span><span class="p">:</span>
+  <span class="k">print</span><span class="p">(</span><span class="s">"can see a rated PG-13 movie"</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span> 
+  <span class="k">print</span><span class="p">(</span><span class="s">"can only see rated PG movies"</span><span class="p">)</span></code></pre>
+</figure>
+<p>When the program gets to the<span> </span><code class="highlighter-rouge">if</code><span> </span>statement, it will check the value of the variable called<span> </span><code class="highlighter-rouge">age</code><span> </span>against all of the conditions, in order, and will print something to the screen accordingly. Note that<span> </span><code class="highlighter-rouge">elif</code><span> </span>is a portmanteau of “else” and “if”. So if the variable<span> </span><code class="highlighter-rouge">age</code><span> </span>holds the value 15, the statement<span> </span><code class="highlighter-rouge">"can see a rated PG-13 movie"</code><span> </span>will be printed to the screen.</p>
+<p>Note how the statement<span> </span><code class="highlighter-rouge">elif age &lt; 17 and age &gt; 12</code><span> </span>has the statement<span> </span><code class="highlighter-rouge">and</code><span> </span>- you can use<span> </span><code class="highlighter-rouge">or</code><span> </span>and<span> </span><code class="highlighter-rouge">not</code><span> </span>in the same way. Understanding a bit about logic and how it works, or being able to rationally think about logic will help you get the conditions right - oh, and a lot of practice.</p>
+<p>Links about conditionals:</p>
+<ul>
+<li><a href="http://docs.python.org/3.3/tutorial/controlflow.html">The official Python documentation</a></li>
+<li><a href="http://www.pythonforbeginners.com/basics/python-if-elif-else-statement/">Python for beginners explains conditionals</a></li>
+</ul>
+<p>checking for equality(and comparators in general)</p>
+<p>A fundamental thing you want to do with your program is check whether some number is equal to another. Say the user tells you how many questions they answered incorrectly on a practice exam, and depending on the number of correctly-answered questions, you can suggest a specific course of action. For integers, strings, floats, and many other variable types, this is done with a simple syntax:<span> </span><code class="highlighter-rouge">==</code>. To explicitly check inequality, use<span> </span><code class="highlighter-rouge">!=</code>.</p>
+<figure class="highlight">
+<pre><code class="language-python" data-lang="python">  
+<span class="k">if</span> <span class="n">a</span> <span class="o">==</span> <span class="mi">3</span><span class="p">:</span> 
+  <span class="k">print</span><span class="p">(</span><span class="s">"the variable has the value 3"</span><span class="p">)</span>
+<span class="k">elif</span> <span class="n">a</span> <span class="o">!=</span> <span class="mi">3</span><span class="p">:</span>
+  <span class="k">print</span><span class="p">(</span><span class="s">"the variable does not have the value 3"</span><span class="p">)</span></code></pre>
+</figure>
+<p>Notice how in this example, the condition is redundant. In the first condition we are checking whether the variable<span> </span><code class="highlighter-rouge">a</code><span> </span>has the value 3 and in the second, we are checking whether<span> </span><code class="highlighter-rouge">a</code><span> </span>does NOT have the value 3. However, if the first condition is not true (<code class="highlighter-rouge">a</code><span> </span>is in fact not 3), then the second condition is by definition true. So a more efficient way to write the above conditional is like this:</p>
+<figure class="highlight">
+<pre><code class="language-python" data-lang="python"><span class="k">if</span> <span class="n">a</span> <span class="o">==</span> <span class="mi">3</span><span class="p">:</span> 
+  <span class="k">print</span><span class="p">(</span><span class="s">"the variable has the value 3"</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+  <span class="k">print</span><span class="p">(</span><span class="s">"the variable does not have the value 3"</span><span class="p">)</span></code></pre>
+</figure>
+<p>The same equality / inequality comparisons work for strings.</p>
+<p>Links about equality and comparators</p>
+<p>奇數或偶數</p>
+<div><i><span><span>輸入類型是否為int相等比較數字mod</span></span></i></div>
+<p><span><span>再次，練習是第一位的（如果您想要額外的挑戰或想要花費更多的時間，可以添加一些其他內容），然後進行討論。</span><span>請享用！</span></span></p>
+<p><span><span>練習2和(解決方法)</span></span></p>
+<p><span><span>詢問用戶一個數字。</span><span>根據數字是偶數還是奇數，向用戶打印一條適當的消息。</span></span><em><span><span>提示：偶數/奇數除以2時的反應如何？</span></span></em></p>
+<p><span><span>附加功能：</span></span></p>
+<ol>
+<li><span><span>如果數字是4的倍數，請打印出另一條消息。</span></span></li>
+<li><span><span>向用戶詢問兩個數字：一個數字要檢查（稱為</span></span><code class="highlighter-rouge">num</code><span><span>），另一個數字要除以（</span></span><code class="highlighter-rouge">check</code><span><span>）。</span><span>如果</span></span><code class="highlighter-rouge">check</code><span><span>平均分為</span></span><code class="highlighter-rouge">num</code><span><span>，請告知用戶。</span><span>如果不是，請打印其他適當的消息。</span></span></li>
+</ol>
+<p><span><span>討論區</span></span></p>
+<p><span><span>本週的概念：</span></span></p>
+<ul>
+<li><span><span>模塊化算術（模運算符）</span></span></li>
+<li><span><span>有條件的（如果語句）</span></span></li>
+<li><span><span>檢查平等</span></span></li>
+</ul>
+<p><span><span>模塊化算術(模運算符)</span></span></p>
+<p><span><span>從小學開始，我們就一直在進行算術運算（加，減，乘，除），這對於我們尋找除法問題不是答案，而是對除法運算的其餘部分有用。</span><span>該操作稱為“模運算”。</span><span>例如，當我將5除以3時，餘數為2，句子的內容如下：“ 5模3為2”。</span></span></p>
+<p><span><span>在Python Shell中：</span></span></p>
+<figure class="highlight">
+<pre><code class="language-python" data-lang="python">  
+<span class="o">&gt;&gt;&gt;</span> <span class="mi">5</span> <span class="o">%</span> <span class="mi">3</span>
+<span class="mi">2</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="mi">6</span> <span class="o">%</span> <span class="mi">3</span>
+<span class="mi">0</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="mi">7</span> <span class="o">%</span> <span class="mi">3</span>
+<span class="mi">1</span></code></pre>
+</figure>
+<p><span><span>該</span></span><code class="highlighter-rouge">%</code><span><span>標誌是完全模運算符。</span></span></p>
+<p><span><span>有條件的</span></span></p>
+<p><span><span></span></span><span><span>當計算機（或程序）需要做出決定時，它會檢查是否滿足某些條件，這就是</span></span><strong><span><span>條件</span></span></strong><span><span>一詞的來源。</span><span>條件語句是說“ if語句”的一種奇特的方式。</span><span>如果米歇爾（Michele）出生於紐約，則她擁有美國護照。</span><span>該語句是在這種情況下為真的條件（如果語句）。</span><span>在Python中，這是相同的方式：</span></span></p>
+<figure class="highlight">
+<pre><code class="language-python" data-lang="python">  
+<span class="k">if</span> <span class="n">age</span> <span class="o">&gt;</span> <span class="mi">17</span><span class="p">:</span> 
+  <span class="k">print</span><span class="p">(</span><span class="s">"can see a rated R movie"</span><span class="p">)</span>
+<span class="k">elif</span> <span class="n">age</span> <span class="o">&lt;</span> <span class="mi">17</span> <span class="ow">and</span> <span class="n">age</span> <span class="o">&gt;</span> <span class="mi">12</span><span class="p">:</span>
+  <span class="k">print</span><span class="p">(</span><span class="s">"can see a rated PG-13 movie"</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span> 
+  <span class="k">print</span><span class="p">(</span><span class="s">"can only see rated PG movies"</span><span class="p">)</span></code></pre>
+</figure>
+<p><span><span>當程序到達該</span></span><code class="highlighter-rouge">if</code><span><span>語句時，它將按</span></span><code class="highlighter-rouge">age</code><span><span>所有條件依次</span><span>檢查被調用的變量的值</span><span>，並將相應的內容打印到屏幕上。</span><span>請注意，這</span></span><code class="highlighter-rouge">elif</code><span><span>是“ else”和“ if”的組合。</span><span>因此，如果變量</span></span><code class="highlighter-rouge">age</code><span><span>保留值15，則該語句</span></span><code class="highlighter-rouge">"can see a rated PG-13 movie"</code><span><span>將被打印到屏幕上。</span></span></p>
+<p><span><span>請注意該語句如何</span></span><code class="highlighter-rouge">elif age &lt; 17 and age &gt; 12</code><span><span>具有該語句</span></span><code class="highlighter-rouge">and</code><span><span>-您可以使用</span></span><code class="highlighter-rouge">or</code><span><span>和</span></span><code class="highlighter-rouge">not</code><span><span>以相同的方式。</span><span>了解一些有關邏輯及其原理的知識，或者能夠理性地思考邏輯，將幫助您找到合適的條件-哦，還有很多練習。</span></span></p>
+<p><span><span>有關條件的鏈接：</span></span></p>
+<ul>
+<li><a href="http://docs.python.org/3.3/tutorial/controlflow.html"><span><span>官方Python文檔</span></span></a></li>
+<li><span><span><a href="http://www.pythonforbeginners.com/basics/python-if-elif-else-statement/">初學者使用Python解釋條件</a></span></span></li>
+</ul>
+<p><span><span>檢查是否相等(以及一般的比較器)</span></span></p>
+<p><span><span>您要對程序執行的基本操作是檢查某個數字是否等於另一個數字。</span><span>假設用戶告訴您在練習考試中有多少個錯誤回答的問題，並且根據正確回答的問題數，您可以提出具體的操作建議。</span><span>對於整數，字符串，浮點數和許多其他變量類型，這是通過簡單的語法完成的：</span></span><code class="highlighter-rouge">==</code><span><span>。</span><span>要顯式檢查不平等，請使用</span></span><code class="highlighter-rouge">!=</code><span><span>。</span></span></p>
+<figure class="highlight">
+<pre><code class="language-python" data-lang="python">  
+<span class="k">if</span> <span class="n">a</span> <span class="o">==</span> <span class="mi">3</span><span class="p">:</span> 
+  <span class="k">print</span><span class="p">(</span><span class="s">"the variable has the value 3"</span><span class="p">)</span>
+<span class="k">elif</span> <span class="n">a</span> <span class="o">!=</span> <span class="mi">3</span><span class="p">:</span>
+  <span class="k">print</span><span class="p">(</span><span class="s">"the variable does not have the value 3"</span><span class="p">)</span></code></pre>
+</figure>
+<p><span><span>請注意，在此示例中，條件是多餘的。</span><span>在第一個條件中，我們正在檢查變量是否</span></span><code class="highlighter-rouge">a</code><span><span>具有值3，在第二個</span><span>條件中，我們正在檢查變量</span><span>是否</span></span><code class="highlighter-rouge">a</code><span><span>不具有值3。但是，如果第一個條件不成立（</span></span><code class="highlighter-rouge">a</code><span><span>實際上不是3），則第二個條件根據定義，條件是正確的。</span><span>因此，編寫上述條件的更有效方法如下：</span></span></p>
+<figure class="highlight">
+<pre><code class="language-python" data-lang="python"><span class="k">if</span> <span class="n">a</span> <span class="o">==</span> <span class="mi">3</span><span class="p">:</span> 
+  <span class="k">print</span><span class="p">(</span><span class="s">"the variable has the value 3"</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+  <span class="k">print</span><span class="p">(</span><span class="s">"the variable does not have the value 3"</span><span class="p">)</span></code></pre>
+</figure>
+<p><span><span>相同的相等/不相等比較適用於字符串。</span></span></p>
+<p><span><span>有關相等性和比較器的鏈接</span></span></p><br />HW3 << <a href='HW3.html'>Previous</a> <a href='處理字符串（幾種方法）.html'>Next</a> >> 處理字符串（幾種方法）</div>
+        
+    <!-- footer -->
+      <div class="container">
+        <div class="row pt-3 mx-auto">
+            <p>
+            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+            Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank" >Colorlib</a>
+            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+            </p>
+        </div>
+      </div>
+    <!-- for footer -->
+    
+        </div> <!-- for site wrap -->
+            <!-- <script src="../cmsimde/static/chimper/js/jquery-3.3.1.min.js"></script> -->
+            <script src="../cmsimde/static/chimper/js/jquery-migrate-3.0.1.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/jquery-ui.js"></script>
+            <script src="../cmsimde/static/chimper/js/popper.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/bootstrap.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/owl.carousel.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/jquery.stellar.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/jquery.countdown.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/jquery.magnific-popup.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/bootstrap-datepicker.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/aos.js"></script>
+            <!--
+            <script src="../cmsimde/static/chimper/js/typed.js"></script>
+                    <script>
+                    var typed = new Typed('.typed-words', {
+                    strings: ["Web Apps"," WordPress"," Mobile Apps"],
+                    typeSpeed: 80,
+                    backSpeed: 80,
+                    backDelay: 4000,
+                    startDelay: 1000,
+                    loop: true,
+                    showCursor: true
+                    });
+                    </script>
+            -->
+            <script src="../cmsimde/static/chimper/js/main.js"></script>
+        
+<!-- 啟用 LaTeX equations 編輯 -->
+  <!-- <script>
+  MathJax = {
+    tex: {inlineMath: [['$', '$'], ['\(', '\)']]}
+  };
+  </script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>-->
+    </body></html>
+        
