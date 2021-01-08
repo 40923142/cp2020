@@ -698,7 +698,86 @@
 <span class="n">Your</span> <span class="n">name</span> <span class="ow">is</span> <span class="n">Michele</span></code></pre>
 </figure>
 <p><span><span>最後發生的</span></span><code class="highlighter-rouge">input()</code><span><span>是，它等待用戶鍵入內容並按Enter。</span><span>僅在用戶按下ENTER之後，程序才會繼續。</span></span></p>
-<h2>List Less Than Ten</h2>
+<h2>Tic Tac Toe Draw</h2>
+<p>exercise 27 (and solusion)</p>
+<p><em>This exercise is Part 3 of 4 of the Tic Tac Toe exercise series. The other exercises are:<span> </span><a href="https://www.practicepython.org/exercise/2014/12/27/24-draw-a-game-board.html">Part 1</a>,<span> </span><a href="https://www.practicepython.org/exercise/2015/11/16/26-check-tic-tac-toe.html">Part 2</a>, and<span> </span><a href="https://www.practicepython.org/exercise/2016/08/03/29-tic-tac-toe-game.html">Part 4</a>.</em></p>
+<p>In a<span> </span><a href="https://www.practicepython.org/exercise/2015/11/16/26-check-tic-tac-toe.html">previous exercise</a><span> </span>we explored the idea of using a list of lists as a “data structure” to store information about a tic tac toe game. In a tic tac toe game, the “game server” needs to know where the<span> </span><code class="highlighter-rouge">X</code>s and<span> </span><code class="highlighter-rouge">O</code>s are in the board, to know whether player 1 or player 2 (or whoever is<span> </span><code class="highlighter-rouge">X</code><span> </span>and<span> </span><code class="highlighter-rouge">O</code><span> </span>won).</p>
+<p>There has also been an exercise about<span> </span><a href="https://www.practicepython.org/exercise/2014/12/27/24-draw-a-game-board.html">drawing the actual tic tac toe gameboard</a><span> </span>using text characters.</p>
+<p>The next logical step is to deal with handling user input. When a player (say player 1, who is<span> </span><code class="highlighter-rouge">X</code>) wants to place an<span> </span><code class="highlighter-rouge">X</code><span> </span>on the screen, they can’t just click on a terminal. So we are going to approximate this clicking simply by asking the user for a coordinate of where they want to place their piece.</p>
+<p>As a reminder, our tic tac toe game is really a list of lists. The game starts out with an empty game board like this:</p>
+<figure class="highlight">
+<pre><code class="language-python" data-lang="python"><span class="n">game</span> <span class="o">=</span> <span class="p">[[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span>
+	<span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span>
+	<span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">]]</span></code></pre>
+</figure>
+<p>The computer asks Player 1 (X) what their move is (in the format<span> </span><code class="highlighter-rouge">row,col</code>), and say they type<span> </span><code class="highlighter-rouge">1,3</code>. Then the game would print out</p>
+<figure class="highlight">
+<pre><code class="language-python" data-lang="python"><span class="n">game</span> <span class="o">=</span> <span class="p">[[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">X</span><span class="p">],</span>
+	<span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span>
+	<span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">]]</span></code></pre>
+</figure>
+<p>And ask Player 2 for their move, printing an<span> </span><code class="highlighter-rouge">O</code><span> </span>in that place.</p>
+<p>Things to note:</p>
+<ul>
+<li>For this exercise, assume that player 1 (the first player to move) will always be<span> </span><code class="highlighter-rouge">X</code><span> </span>and player 2 (the second player) will always be<span> </span><code class="highlighter-rouge">O</code>.</li>
+<li>Notice how in the example I gave coordinates for where I want to move starting from (1, 1) instead of (0, 0). To people who don’t program, starting to count at 0 is a strange concept, so it is better for the user experience if the row counts and column counts start at 1. This is not required, but whichever way you choose to implement this, it should be explained to the player.</li>
+<li>Ask the user to enter coordinates in the form “row,col” - a number, then a comma, then a number. Then you can use your Python skills to figure out which row and column they want their piece to be in.</li>
+<li>Don’t worry about checking whether someone won the game, but if a player tries to put a piece in a game position where there already is another piece, do not allow the piece to go there.</li>
+</ul>
+<p>Bonus:</p>
+<ul>
+<li>For the “standard” exercise, don’t worry about “ending” the game - no need to keep track of how many squares are full. In a bonus version, keep track of how many squares are full and automatically stop asking for moves when there are no more valid moves.</li>
+</ul>
+<p>concepts</p>
+<p>One review concept that is definitely needed (in addition to the<span> </span><a href="https://www.practicepython.org/exercise/2014/01/29/01-character-input.html">user input</a><span> </span>that is the core of the exercise) is the need to “split” strings.</p>
+<p>The user will input coordinates in the form “row,col”, which<span> </span><code class="highlighter-rouge">input()</code><span> </span>will then read in as a string. But we really want the numbers that come out of that string, to know which row and column to place the piece at.</p>
+<p>One approach is to use the idea of<span> </span><a href="https://www.practicepython.org/exercise/2014/03/12/06-string-lists.html">strings as lists</a><span> </span>to extract the row and column numbers. This works great if your row and column numbers are always single digits - the row will always be at index 0 and the column will always be at index 2. But this breaks when the numbers are larger than one digit (I know, not going to happen in tic tac toe, but it’s easy to image extending this to other games).</p>
+<p>Instead, there are two string manipulation functions that will help you:</p>
+<ol>
+<li><a href="https://docs.python.org/2/library/string.html#string.split"><code class="highlighter-rouge">.split()</code></a><span> </span>- Takes a string and returns a list, using the separator as the split criteria. So if you have a string<span> </span><code class="highlighter-rouge">name = "John Doe"</code><span> </span>and do<span> </span><code class="highlighter-rouge">name_list = name.split(" ")</code>,<span> </span><code class="highlighter-rouge">name_list</code><span> </span>will be<span> </span><code class="highlighter-rouge">["John", "Doe"]</code>. You can use any separator / split character you want. Just remember, that each of the elements returned back will be a string as well.</li>
+<li><a href="https://docs.python.org/2/library/string.html#string.strip"><code class="highlighter-rouge">.strip()</code></a><span> </span>- Takes a string and removes the whitespace on the left and right sides of it. So you have a string<span> </span><code class="highlighter-rouge">name = " Michele "</code>, and you do<span> </span><code class="highlighter-rouge">name = name.strip()</code>, and now<span> </span><code class="highlighter-rouge">name</code><span> </span>will just be<span> </span><code class="highlighter-rouge">"Michele"</code><span> </span>- nice and clean.</li>
+</ol>
+<p>I challenge you to figure out how to use them in the exercise!</p>
+<p></p>
+<p>練習27(和解決辦法)</p>
+<p><em><span><span>此練習是Tic Tac Toe練習系列4的第3部分。</span><span>其他練習是：</span></span><a href="https://www.practicepython.org/exercise/2014/12/27/24-draw-a-game-board.html"><span><span>第1部分</span></span></a><span><span>，</span></span><a href="https://www.practicepython.org/exercise/2015/11/16/26-check-tic-tac-toe.html"><span><span>第2</span></span></a><span></span><a href="https://www.practicepython.org/exercise/2016/08/03/29-tic-tac-toe-game.html"><span><span>部分</span></span></a><span><span>和</span><a href="https://www.practicepython.org/exercise/2016/08/03/29-tic-tac-toe-game.html"><span>第4部分</span></a><span>。</span></span></em></p>
+<p><span><span>在</span></span><a href="https://www.practicepython.org/exercise/2015/11/16/26-check-tic-tac-toe.html"><span><span>先前的練習中，</span></span></a><span><span>我們探討了使用列表列表作為“數據結構”來存儲有關井字遊戲的信息的想法。</span><span>在一個井字遊戲中，“遊戲服務器”需要知道其中</span></span><code class="highlighter-rouge">X</code><span><span>S和</span></span><code class="highlighter-rouge">O</code><span><span>s為中板，知道是否播放器1或播放器2（或誰是</span></span><code class="highlighter-rouge">X</code><span><span>和</span></span><code class="highlighter-rouge">O</code><span><span>韓元）。</span></span></p>
+<p><span><span>還進行了有關</span><span>使用文本字符</span></span><a href="https://www.practicepython.org/exercise/2014/12/27/24-draw-a-game-board.html"><span><span>繪製實際井字遊戲板</span></span></a><span><span>的練習</span><span>。</span></span></p>
+<p><span><span>下一步的邏輯步驟是處理用戶輸入。</span><span>當玩家（例如玩家1，即</span></span><code class="highlighter-rouge">X</code><span><span>）想要</span></span><code class="highlighter-rouge">X</code><span><span>在屏幕上</span><span>放置一個</span><span>時，他們不能僅單擊終端。</span><span>因此，我們將簡單地通過詢問用戶要放置其作品的坐標來近似此點擊。</span></span></p>
+<p><span><span>提醒一下，我們的井字遊戲實際上是一個列表列表。</span><span>遊戲從一個空的遊戲板開始，如下所示：</span></span></p>
+<figure class="highlight">
+<pre><code class="language-python" data-lang="python"><span class="n">game</span> <span class="o">=</span> <span class="p">[[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span>
+	<span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span>
+	<span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">]]</span></code></pre>
+</figure>
+<p><span><span>計算機問玩家1（X）他們的移動方向（格式為</span></span><code class="highlighter-rouge">row,col</code><span><span>），然後說出他們的輸入</span></span><code class="highlighter-rouge">1,3</code><span><span>。</span><span>然後遊戲會打印出來</span></span></p>
+<figure class="highlight">
+<pre><code class="language-python" data-lang="python"><span class="n">game</span> <span class="o">=</span> <span class="p">[[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">X</span><span class="p">],</span>
+	<span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span>
+	<span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">]]</span></code></pre>
+</figure>
+<p><span><span>並詢問玩家2的舉動，並</span></span><code class="highlighter-rouge">O</code><span><span>在該位置</span><span>打印一個</span><span>。</span></span></p>
+<p><span><span>注意事項：</span></span></p>
+<ul>
+<li><span><span>在本練習中，假設玩家1（第一位移動的玩家）將始終為，</span></span><code class="highlighter-rouge">X</code><span><span>而玩家2（第二位移動的玩家）將始終為</span></span><code class="highlighter-rouge">O</code><span><span>。</span></span></li>
+<li><span><span>請注意，在示例中，我如何給出要從（1，1）而不是（0，0）開始移動的坐標。</span><span>對於不編程的人，從0開始計數是一個奇怪的概念，因此如果行計數和列計數從1開始，則對用戶體驗更好。這不是必需的，但是無論選擇哪種方式來實現，應該向玩家解釋。</span></span></li>
+<li><span><span>要求用戶以“ row，col”的形式輸入坐標-一個數字，然後是一個逗號，然後是一個數字。</span><span>然後，您可以使用您的Python技能來確定他們希望自己的作品位於哪一行。</span></span></li>
+<li><span><span>不必擔心檢查某人是否贏得了比賽，但是如果玩家試圖將一個棋子放置在已經有另一個棋子的遊戲位置中，則不要讓該棋子去那裡。</span></span></li>
+</ul>
+<p><span><span>獎金：</span></span></p>
+<ul>
+<li><span><span>對於“標準”練習，不必擔心“結束”遊戲-無需跟踪多少個正方形已滿。</span><span>在獎勵版本中，跟踪多少個正方形已滿，並在沒有更多有效移動時自動停止要求移動。</span></span></li>
+</ul>
+<p><span><span>概念</span></span></p>
+<p><span><span>（除了</span><span>作為練習核心</span><span>的</span></span><a href="https://www.practicepython.org/exercise/2014/01/29/01-character-input.html"><span><span>用戶輸入</span></span></a><span><span>之外）肯定需要一個審核概念是</span><span>“拆分”字符串。</span></span></p>
+<p><span><span>用戶將以“ row，col”形式輸入坐標，然後</span></span><code class="highlighter-rouge">input()</code><span><span>將其作為字符串讀取。</span><span>但是我們確實希望從該字符串中得出的數字知道將片段放置在哪一行和哪一列。</span></span></p>
+<p><span><span>一種方法是使用</span></span><a href="https://www.practicepython.org/exercise/2014/03/12/06-string-lists.html"><span><span>字符串作為列表</span></span></a><span><span>的概念</span><span>來提取行號和列號。</span><span>如果行號和列號始終是一位數字，則該方法非常有用-行將始終在索引0處，列始終在索引2。但是，當數字大於一位時，這種方法會中斷（我知道，會在井字遊戲中發生，但很容易將其擴展到其他遊戲。</span></span></p>
+<p><span><span>相反，有兩個字符串操作函數可以為您提供幫助：</span></span></p>
+<ol>
+<li><a href="https://docs.python.org/2/library/string.html#string.split"><code class="highlighter-rouge">.split()</code></a><span><span>-使用分隔符作為分割條件，獲取一個字符串並返回一個列表。</span><span>因此，如果您有琴弦</span></span><code class="highlighter-rouge">name = "John Doe"</code><span><span>做</span></span><code class="highlighter-rouge">name_list = name.split(" ")</code><span><span>，</span></span><code class="highlighter-rouge">name_list</code><span><span>將是</span></span><code class="highlighter-rouge">["John", "Doe"]</code><span><span>。</span><span>您可以使用所需的任何分隔符/拆分字符。</span><span>請記住，返回的每個元素也將是一個字符串。</span></span></li>
+<li><a href="https://docs.python.org/2/library/string.html#string.strip"><code class="highlighter-rouge">.strip()</code></a><span><span>-取一個字符串並刪除其左側和右側的空格。</span><span>這樣，您就有了一個字符串</span></span><code class="highlighter-rouge">name = " Michele "</code><span><span>，並且執行了</span></span><code class="highlighter-rouge">name = name.strip()</code><span><span>，現在</span></span><code class="highlighter-rouge">name</code><span><span>就變得</span></span><code class="highlighter-rouge">"Michele"</code><span><span>很乾淨了。</span></span></li>
+</ol>
+<p><span><span>我挑戰您弄清楚如何在練習中使用它們！</span></span></p><h2>List Less Than Ten</h2>
 <div><i>list numbers elements if conditional</i></div>
 <div><i></i></div>
 <div><i>exercise 3 (and solution)</i></div>
